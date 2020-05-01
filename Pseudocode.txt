@@ -1,0 +1,16 @@
+interface Sorted
+  boolean isWellSorted( String[] sequence)
+
+Klasse AbhängigkeitsTest 
+  
+  String[][] Abhängigkeit 
+  
+  boolean isWellSorted(Sting[] sequence):
+    for i = 0 bis Ende sequence:
+      aktuell = sequence[i]
+      for j = 0 bis Ende Abhängigkeit:
+        if (aktuell gleich Abhängigkeit[j][1]):
+          for k = i+1 bis Ende sequence:
+            if (sequence[k] gleich Abhängigkeit[j][0]):
+              return false
+    return true
